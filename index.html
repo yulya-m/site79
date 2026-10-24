@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>МАОУ «СОШ №79» г. Перми — официальный сайт</title>
+    <meta name="description" content="Официальный сайт МАОУ «Средняя общеобразовательная школа №79» города Перми: новости, сведения об организации, приём в школу, расписание.">
+    <link rel="icon" href="logo.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">
+    <div class="container topbar__inner">
+        <div class="topbar__contacts">
+            <a href="tel:+73422063500">+7 (342) 206-35-00</a>
+            <a href="mailto:sc79perm@yandex.ru">sc79perm@yandex.ru</a>
+        </div>
+        <div class="topbar__links">
+            <a href="#info">Сведения об образовательной организации</a>
+            <a href="#map">Карта сайта</a>
+        </div>
+    </div>
+</div>
+
+<header class="header">
+    <div class="container header__inner">
+        <a href="#home" class="logo">
+            <img src="logo.svg" class="logo__icon" alt="Логотип школы">
+            <div class="logo__text">
+                <span class="logo__name">Школа №79</span>
+                <span class="logo__full">МАОУ «СОШ №79» г. Перми</span>
+            </div>
+        </a>
+
+        <div class="header__tools">
+            <form class="search-form">
+                <input type="search" class="search" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+            </form>
+            <button class="btn-eye" type="button" aria-label="Версия для слабовидящих">
+                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                    <path d="M12 5C6.5 5 2.7 9.3 1.5 12c1.2 2.7 5 7 10.5 7s9.3-4.3 10.5-7C21.3 9.3 17.5 5 12 5z" fill="none" stroke="currentColor" stroke-width="2"/>
+                    <circle cx="12" cy="12" r="3.5" fill="currentColor"/>
+                </svg>
+                <span class="btn-eye__text">Для слабовидящих</span>
+            </button>
+        </div>
+
+        <button class="burger" type="button" aria-label="Открыть меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+
+    <nav class="nav">
+        <div class="container">
+            <ul class="nav__list">
+                <li><a href="#home" class="nav__link">Главная</a></li>
+                <li><a href="#news" class="nav__link">Новости</a></li>
+                <li><a href="#info" class="nav__link">Сведения об организации</a></li>
+                <li><a href="#parents" class="nav__link">Родителям и ученикам</a></li>
+                <li><a href="#enroll" class="nav__link">Поступающим</a></li>
+                <li><a href="#activity" class="nav__link">Деятельность</a></li>
+                <li><a href="#schedule" class="nav__link">Расписание</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- панель настроек для слабовидящих, по умолчанию скрыта -->
+    <div class="a11y-panel" hidden>
+        <div class="container a11y-panel__inner">
+            <div class="a11y-panel__group">
+                <span class="a11y-panel__label">Размер шрифта:</span>
+                <button type="button" class="a11y-btn" data-font="normal">А</button>
+                <button type="button" class="a11y-btn a11y-btn--md" data-font="large">А</button>
+                <button type="button" class="a11y-btn a11y-btn--lg" data-font="xlarge">А</button>
+            </div>
+            <div class="a11y-panel__group">
+                <span class="a11y-panel__label">Цвет сайта:</span>
+                <button type="button" class="a11y-btn a11y-btn--bw" data-theme="bw" title="Чёрным по белому">Ц</button>
+                <button type="button" class="a11y-btn a11y-btn--wb" data-theme="wb" title="Белым по чёрному">Ц</button>
+            </div>
+            <div class="a11y-panel__group">
+                <span class="a11y-panel__label">Изображения:</span>
+                <button type="button" class="a11y-btn a11y-btn--wide" data-images="toggle">Выключить</button>
+            </div>
+            <button type="button" class="a11y-reset">Обычная версия сайта</button>
+        </div>
+    </div>
+</header>
+
+<main>
+
+<!-- Главная -->
+<section id="home" class="section">
+    <div class="hero">
+        <div class="container">
+            <div class="hero__text">
+                <h1 class="hero__title">Курсом к знаниям. Вместе к будущему</h1>
+                <p class="hero__subtitle">Муниципальное автономное общеобразовательное учреждение «Средняя общеобразовательная школа №79» города Перми. Два корпуса: ул. Томская, 30 и ул. Цимлянская, 4.</p>
+                <div class="hero__buttons">
+                    <a href="#enroll" class="btn">Поступающим</a>
+                    <a href="#info" class="btn btn--light">Сведения об организации</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="block-head">
+            <h2 class="section__title">Новости</h2>
+            <a href="#news" class="link-more">Все новости</a>
+        </div>
+        <!-- сюда новости подставляются из script.js (3 последние) -->
+        <div class="news-list news-list--home" id="home-news"></div>
+    </div>
+</section>
+
+<!-- Новости -->
+<section id="news" class="section">
+    <div class="container">
+        <h2 class="section__title">Новости</h2>
+        <p class="section__lead">Актуальные события школы</p>
+        <div class="news-list" id="all-news"></div>
+    </div>
+</section>
+
+<!-- Сведения об образовательной организации -->
+<section id="info" class="section">
+    <div class="container">
+        <h2 class="section__title">Сведения об образовательной организации</h2>
+        <p class="section__lead">Обязательные подразделы</p>
+        <ul class="info-list">
+            <li><a href="#info-main">Основные сведения</a></li>
+            <li><a href="#info-structure">Структура и органы управления</a></li>
+            <li><a href="#info-docs">Документы</a></li>
+            <li><a href="#info-education">Образование</a></li>
+            <li><a href="#info-standards">Образовательные стандарты и требования</a></li>
+            <li><a href="#info-management">Руководство</a></li>
+            <li><a href="#info-teachers">Педагогический состав</a></li>
+            <li><a href="#info-mto">Материально-техническое обеспечение</a></li>
+            <li><a href="#info-paid">Платные образовательные услуги</a></li>
+            <li><a href="#info-finance">Финансово-хозяйственная деятельность</a></li>
+            <li><a href="#info-vacancies">Вакантные места</a></li>
+            <li><a href="#info-scholarship">Стипендии и меры поддержки</a></li>
+            <li><a href="#info-international">Международное сотрудничество</a></li>
+            <li><a href="#info-food">Организация питания</a></li>
+        </ul>
+    </div>
+</section>
+
+<!-- Основные сведения -->
+<section id="info-main" class="section">
+    <div class="container">
+        <h2 class="section__title">Основные сведения</h2>
+
+        <div class="info-block">
+            <h3>Полное наименование</h3>
+            <p itemprop="fullName">Муниципальное автономное общеобразовательное учреждение «Средняя общеобразовательная школа №79» города Перми</p>
+        </div>
+
+        <div class="info-block">
+            <h3>Сокращённое наименование</h3>
+            <p itemprop="shortName">МАОУ «СОШ №79» г. Перми</p>
+        </div>
+
+        <div class="info-block">
+            <h3>Дата создания</h3>
+            <p itemprop="regDate">01.09.1969</p>
+        </div>
+
+        <div class="info-block">
+            <h3>Адреса</h3>
+            <p itemprop="address">614026, г. Пермь, ул. Томская, д. 30</p>
+            <p itemprop="address">614026, г. Пермь, ул. Цимлянская, д. 4</p>
+        </div>
+
+        <div class="info-block">
+            <h3>Режим работы</h3>
+            <div itemprop="workTime">
+                <p>Пн–Пт: 8:00–21:00</p>
+                <p>Сб: 8:00–16:00</p>
+                <p>Вс: выходной</p>
+            </div>
+        </div>
+
+        <div class="info-block">
+            <h3>Контактные телефоны</h3>
+            <p><strong>Корпус на ул. Томская, 30:</strong></p>
+            <!-- TODO: проверить эти два номера, в них 6 цифр вместо 7 -->
+            <p>Администратор: <span itemprop="telephone">+7 (342) 636-961</span></p>
+            <p>Вахта: <span itemprop="telephone">+7 (342) 637-380</span></p>
+            <p>Заместитель директора: <a href="tel:+73422637094" itemprop="telephone">+7 (342) 263-70-94</a></p>
+
+            <p class="mt"><strong>Корпус на ул. Цимлянская, 4:</strong></p>
+            <p>Секретарь: <a href="tel:+73422063500" itemprop="telephone">+7 (342) 206-35-00</a></p>
+            <p>Вахта: <a href="tel:+73422063500">+7 (342) 206-35-00</a> (доб. 2)</p>
+            <p>Бухгалтерия: <a href="tel:+73422063500">+7 (342) 206-35-00</a> (доб. 3)</p>
+            <p>Заместитель директора: <a href="tel:+73422063500">+7 (342) 206-35-00</a> (доб. 4)</p>
+            <p>Медицинские работники: <a href="tel:+73422063500">+7 (342) 206-35-00</a> (доб. 5)</p>
+            <p>Социальный педагог: <a href="tel:+73422063500">+7 (342) 206-35-00</a> (доб. 6)</p>
+        </div>
+
+        <div class="info-block">
+            <h3>Email</h3>
+            <p><a href="mailto:sc79perm@yandex.ru" itemprop="email">sc79perm@yandex.ru</a></p>
+        </div>
+
+        <div class="info-block" itemprop="uchredLaw">
+            <h3>Учредитель</h3>
+            <p itemprop="nameUchred">Департамент образования администрации города Перми</p>
+            <p>Юридический адрес: <span itemprop="addressUchred">614000, г. Пермь, ул. Сибирская, д. 17</span></p>
+            <p>Телефон: <a href="tel:+73422127050" itemprop="telUchred">+7 (342) 212-70-50</a></p>
+            <p>Email: <a href="mailto:do@perm.permkrai.ru" itemprop="mailUchred">do@perm.permkrai.ru</a></p>
+            <p>Сайт: <a href="https://permedu.ru" itemprop="websiteUchred" target="_blank">permedu.ru</a></p>
+        </div>
+
+        <a href="#info" class="btn-back">← Назад к сведениям</a>
+    </div>
+</section>
+
+<!-- Структура -->
+<section id="info-structure" class="section">
+    <div class="container">
+        <h2 class="section__title">Структура и органы управления</h2>
+        <p class="text">Управление Учреждением осуществляется в соответствии с действующим законодательством РФ с учётом особенностей, установленных Федеральным законом от 29.12.2012 № 273-ФЗ «Об образовании в РФ».</p>
+
+        <div class="info-block">
+            <h3>Руководитель</h3>
+            <p>Веселухина Венера Расульевна</p>
+            <p>Должность: Директор</p>
+            <p>Телефон: <a href="tel:+73422063500">+7 (342) 206-35-00</a></p>
+            <p>Email: <a href="mailto:sc79perm@yandex.ru">sc79perm@yandex.ru</a></p>
+        </div>
+
+        <div class="info-block">
+            <h3>Органы управления</h3>
+            <ul class="info-sublist">
+                <li>Наблюдательный совет</li>
+                <li>Общее собрание работников</li>
+                <li>Управляющий совет</li>
+                <li>Педагогический совет</li>
+            </ul>
+        </div>
+
+        <a href="#info" class="btn-back">← Назад к сведениям</a>
+    </div>
+</section>
+
+<!-- Документы -->
+<section id="info-docs" class="section">
+    <div class="container">
+        <h2 class="section__title">Документы</h2>
+
+        <div class="doc-category">
+            <h3>Устав и уставные документы</h3>
+            <div class="doc-item"><span>Устав образовательной организации</span><a href="#" class="btn-small">Скачать</a></div>
+            <div class="doc-item"><span>Изменения в Устав</span><a href="#" class="btn-small">Скачать</a></div>
+        </div>
+
+        <div class="doc-category">
+            <h3>Отчёты о самообследовании</h3>
+            <div class="doc-item"><span>Отчёт о результатах самообследования</span><a href="#" class="btn-small">Скачать</a></div>
+        </div>
+
+        <div class="doc-category">
+            <h3>Предписания органов контроля</h3>
+            <div class="doc-item"><span>Предписания органов государственного контроля</span><a href="#" class="btn-small">Скачать</a></div>
+        </div>
+
+        <div class="doc-category">
+            <h3>Локальные нормативные акты</h3>
+            <div class="doc-item"><span>Локальные нормативные акты</span><a href="#" class="btn-small">Скачать</a></div>
+        </div>
+
+        <a href="#info" class="btn-back">← Назад к сведениям</a>
+    </div>
+</section>
+
+<!-- Образование -->
+<section id="info-education" class="section">
+    <div class="container">
+        <h2 class="section__title">Образование</h2>
+
+        <div class="info-block">
+            <h3>Реализуемые образовательные программы</h3>
+            <ul class="info-sublist">
+                <li>Основная образовательная программа начального общего образования</li>
+                <li>Основная образовательная программа основного общего образования</li>
+                <li>Основная образовательная программа среднего общего образования</li>
+                <li>Адаптированные образовательные программы для обучающихся с ОВЗ</li>
+            </ul>
+        </div>
+
+        <div class="info-block">
+            <h3>Форма обучения</h3>
+            <p>Очная</p>
+        </div>
+
+        <div class="info-block">
+            <h3>Сроки обучения</h3>
+            <p>НОО — 4 года</p>
+            <p>ООО — 5 лет</p>
+            <p>СОО — 2 года</p>
+        </div>
+
+        <a href="#info" class="btn-back">← Назад к сведениям</a>
+    </div>
+</section>
+
+<!-- Стандарты -->
+<section id="info-standards" class="section">
+    <div class="container">
+        <h2 class="section__title">Образовательные стандарты и требования</h2>
+
+        <div class="info-block">
+            <h3>ФГОС</h3>
+            <ul class="info-sublist">
+                <li>ФГОС начального общего образования</li>
+                <li>ФГОС основного общего образования</li>
+                <li>ФГОС среднего общего образования</li>
+                <li>ФГОС для обучающихся с ОВЗ</li>
+            </ul>
+        </div>
+
+        <div class="info-block">
+            <h3>Федеральные образовательные программы</h3>
+            <ul class="info-sublist">
+                <li>ФОП НОО</li>
+                <li>ФОП ООО</li>
+                <li>ФОП СОО</li>
+            </ul>
+        </div>
+
+        <a href="#info" class="btn-back">← Назад к сведениям</a>
+    </div>
+</section>
+
+<!-- Руководство -->
+<section id="info-management" class="section">
+    <div class="container">
+        <h2 class="section__title">Руководство</h2>
+
+        <div class="info-block" itemprop="rucovodstvo">
+            <h3>Директор</h3>
+            <p itemprop="fio">Веселухина Венера Расульевна</p>
+            <p>Телефон: <a href="tel:+73422063500" itemprop="telephone">+7 (342) 206-35-00</a></p>
+            <p>Email: <a href="mailto:sc79perm@yandex.ru" itemprop="email">sc79perm@yandex.ru</a></p>
+            <p>Время приёма: Пн–Пт, 7:30–12:30</p>
+        </div>
+
+        <div class="info-block">
+            <h3>Заместители директора</h3>
+            <p itemprop="rucovodstvoZam"><span itemprop="fio">Гартун Любовь Анатольевна</span> — <span itemprop="post">заместитель директора по УВР (начальная школа)</span></p>
+            <p itemprop="rucovodstvoZam"><span itemprop="fio">Зиганшина Светлана Владимировна</span> — <span itemprop="post">заместитель директора по УВР (СОО)</span></p>
+            <p itemprop="rucovodstvoZam"><span itemprop="fio">Назарова Елена Викторовна</span> — <span itemprop="post">заместитель директора по УВР (ООО)</span></p>
+            <p itemprop="rucovodstvoZam"><span itemprop="fio">Лаврова Елена Одиловна</span> — <span itemprop="post">заместитель директора по ВР</span></p>
+            <p itemprop="rucovodstvoZam"><span itemprop="fio">Торопова Наталья Анатольевна</span> — <span itemprop="post">заместитель директора по АХЧ</span></p>
+        </div>
+
+        <a href="#info" class="btn-back">← Назад к сведениям</a>
+    </div>
+</section>
+
+<!-- Педагогический состав -->
+<section id="info-teachers" class="section">
+    <div class="container">
+        <h2 class="section__title">Педагогический состав</h2>
+        <p class="section__lead">Выберите предмет, чтобы увидеть учителей</p>
+
+        <div class="filters">
+            <button type="button" class="filter filter--active" data-subject="all">Все</button>
+            <button type="button" class="filter" data-subject="english">Английский язык</button>
+            <button type="button" class="filter" data-subject="biology">Биология</button>
+            <button type="button" class="filter" data-subject="geography">География</button>
+            <button type="button" class="filter" data-subject="history">История</button>
+            <button type="button" class="filter" data-subject="math">Математика</button>
+            <button type="button" class="filter" data-subject="music">Музыка</button>
+            <button type="button" class="filter" data-subject="primary">Начальная школа</button>
+            <button type="button" class="filter" data-subject="russian">Русский язык</button>
+            <button type="button" class="filter" data-subject="physics">Физика</button>
+            <button type="button" class="filter" data-subject="pe">Физическая культура</button>
+            <button type="button" class="filter" data-subject="chemistry">Химия</button>
+        </div>
+
+        <!-- TODO: заменить на настоящий список педагогов со старого сайта -->
+        <div class="teachers">
+            <div class="teacher" data-subject="english">
+                <p class="teacher__name">Фамилия Имя Отчество</p>
+                <p class="teacher__subject">Учитель английского языка</p>
+            </div>
+            <div class="teacher" data-subject="biology">
+                <p class="teacher__name">Фамилия Имя Отчество</p>
+                <p class="teacher__subject">Учитель биологии</p>
+            </div>
+            <div class="teacher" data-subject="geography">
+                <p class="teacher__name">Фамилия Имя Отчество</p>
+                <p class="teacher__subject">Учитель географии</p>
+            </div>
+            <div class="teacher" data-subject="history">
+                <p class="teacher__name">Фамилия Имя Отчество</p>
+                <p class="teacher__subject">Учитель истории и обществознания</p>
+            </div>
+            <div class="teacher" data-subject="math">
+                <p class="teacher__name">Фамилия Имя Отчество</p>
+                <p class="teacher__subject">Учитель математики</p>
+            </div>
+            <div class="teacher" data-subject="math physics">
+                <p class="teacher__name">Фамилия Имя Отчество</p>
+                <p class="teacher__subject">Учитель математики и физики</p>
+            </div>
+            <div class="teacher" data-subject="music">
+                <p class="teacher__name">Фамилия Имя Отчество</p>
+                <p class="teacher__subject">Учитель музыки</p>
+            </div>
+            <div class="teacher" data-subject="primary">
+                <p class="teacher__name">Фамилия Имя Отчество</p>
+                <p class="teacher__subject">Учитель начальных классов</p>
+            </div>
+            <div class="teacher" data-subject="russian">
+                <p class="teacher__name">Фамилия Имя Отчество</p>
+                <p class="teacher__subject">Учитель русского языка и литературы</p>
+            </div>
+            <div class="teacher" data-subject="pe">
+                <p class="teacher__name">Фамилия Имя Отчество</p>
+                <p class="teacher__subject">Учитель физической культуры</p>
+            </div>
+            <div class="teacher" data-subject="chemistry">
+                <p class="teacher__name">Фамилия Имя Отчество</p>
+                <p class="teacher__subject">Учитель химии</p>
+            </div>
+        </div>
+        <p class="teachers__empty" hidden>По этому предмету пока нет данных.</p>
+
+        <a href="#" class="btn-more mt">Скачать список (Excel)</a>
+        <br>
+        <a href="#info" class="btn-back">← Назад к сведениям</a>
+    </div>
+</section>
+
+<!-- МТО -->
+<section id="info-mto" class="section">
+    <div class="container">
+        <h2 class="section__title">Материально-техническое обеспечение</h2>
+
+        <div class="info-block">
+            <h3>Учебные кабинеты</h3>
+            <p>20 кабинетов для начальных классов, 33 кабинета для средней и старшей школы.</p>
+        </div>
+
+        <div class="info-block">
+            <h3>Инфраструктура</h3>
+            <ul class="info-sublist">
+                <li>Библиотека с читальными зонами</li>
+                <li>Лингафонный кабинет</li>
+                <li>Шахматный клуб</li>
+                <li>Кабинет первой медицинской помощи</li>
+                <li>Коворкинг-зал</li>
+                <li>Спортивный блок</li>
+                <li>Музыкальная студия</li>
+                <li>Школьное радио и телевидение</li>
+                <li>Фото- и видеостудия</li>
+                <li>Актовый зал на 220 мест</li>
+                <li>Лаборатории</li>
+                <li>Мастерские</li>
+            </ul>
+        </div>
+
+        <a href="#info" class="btn-back">← Назад к сведениям</a>
+    </div>
+</section>
+
+<!-- Платные услуги -->
+<section id="info-paid" class="section">
+    <div class="container">
+        <h2 class="section__title">Платные образовательные услуги</h2>
+
+        <div class="info-block">
+            <h3>Организатор</h3>
+            <p>Зиганшина Светлана Владимировна</p>
+            <p>Приём: суббота, 9:00–13:00, каб. 223</p>
+            <p>Телефон: <a href="tel:+73422041147">+7 (342) 204-11-47</a></p>
+        </div>
+
+        <div class="info-block">
+            <h3>Документы</h3>
+            <div class="doc-item"><span>Порядок оказания платных услуг</span><a href="#" class="btn-small">Скачать</a></div>
+            <div class="doc-item"><span>Образец договора</span><a href="#" class="btn-small">Скачать</a></div>
+            <div class="doc-item"><span>Стоимость обучения</span><a href="#" class="btn-small">Скачать</a></div>
+            <div class="doc-item"><span>Перечень услуг 1–4 класс</span><a href="#" class="btn-small">Скачать</a></div>
+            <div class="doc-item"><span>Перечень услуг 5–11 класс</span><a href="#" class="btn-small">Скачать</a></div>
+        </div>
+
+        <a href="#info" class="btn-back">← Назад к сведениям</a>
+    </div>
+</section>
+
+<!-- ФХД -->
+<section id="info-finance" class="section">
+    <div class="container">
+        <h2 class="section__title">Финансово-хозяйственная деятельность</h2>
+
+        <div class="info-block">
+            <h3>Объём деятельности</h3>
+            <p>Финансовое обеспечение осуществляется за счёт бюджетных ассигнований и по договорам об оказании платных услуг.</p>
+        </div>
+
+        <div class="info-block">
+            <h3>Документы</h3>
+            <div class="doc-item"><span>Отчёт о финансовых результатах</span><a href="#" class="btn-small">Скачать</a></div>
+            <div class="doc-item"><span>План ФХД на 2026 год</span><a href="#" class="btn-small">Скачать</a></div>
+        </div>
+
+        <a href="#info" class="btn-back">← Назад к сведениям</a>
+    </div>
+</section>
+
+<!-- Вакантные места -->
+<section id="info-vacancies" class="section">
+    <div class="container">
+        <h2 class="section__title">Вакантные места</h2>
+
+        <div class="info-block">
+            <div class="table-wrap">
+                <table class="info-table">
+                    <thead>
+                        <tr><th>Уровень</th><th>Классы</th><th>Форма</th><th>Вакантных мест</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>НОО</td><td>1–4</td><td>очная</td><td>0</td></tr>
+                        <tr><td>ООО</td><td>5–9</td><td>очная</td><td>0</td></tr>
+                        <tr><td>СОО</td><td>10–11</td><td>очная</td><td>0</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="mt"><strong>Вакантных мест нет.</strong></p>
+        </div>
+
+        <a href="#info" class="btn-back">← Назад к сведениям</a>
+    </div>
+</section>
+
+<!-- Стипендии -->
+<section id="info-scholarship" class="section">
+    <div class="container">
+        <h2 class="section__title">Стипендии и меры поддержки</h2>
+
+        <div class="info-block">
+            <div class="table-wrap">
+                <table class="info-table">
+                    <thead>
+                        <tr><th>Показатель</th><th>Значение</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Стипендии</td><td>Не предусмотрены</td></tr>
+                        <tr><td>Меры поддержки</td><td>Не предоставляются</td></tr>
+                        <tr><td>Общежитие</td><td>Отсутствует</td></tr>
+                        <tr><td>Интернат</td><td>Отсутствует</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <a href="#info" class="btn-back">← Назад к сведениям</a>
+    </div>
+</section>
+
+<!-- Международное сотрудничество -->
+<section id="info-international" class="section">
+    <div class="container">
+        <h2 class="section__title">Международное сотрудничество</h2>
+
+        <div class="info-block">
+            <div class="table-wrap">
+                <table class="info-table">
+                    <thead>
+                        <tr><th>Показатель</th><th>Значение</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Договоры с международными организациями</td><td>Отсутствуют</td></tr>
+                        <tr><td>Международная аккредитация</td><td>Отсутствует</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <a href="#info" class="btn-back">← Назад к сведениям</a>
+    </div>
+</section>
+
+<!-- Питание -->
+<section id="info-food" class="section">
+    <div class="container">
+        <h2 class="section__title">Организация питания</h2>
+
+        <div class="info-block">
+            <h3>Условия питания</h3>
+            <div class="table-wrap">
+                <table class="info-table">
+                    <thead>
+                        <tr><th>Корпус</th><th>Адрес</th><th>Площадь</th><th>Мест</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>МАОУ «СОШ №79»</td><td>ул. Томская, 30</td><td>195 м²</td><td>180</td></tr>
+                        <tr><td>МАОУ «СОШ №79»</td><td>ул. Цимлянская, 4</td><td>180 м²</td><td>180</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="info-block">
+            <h3>Документы</h3>
+            <div class="doc-item"><span>Положение об организации питания</span><a href="#" class="btn-small">Скачать</a></div>
+            <div class="doc-item"><span>График питания</span><a href="#" class="btn-small">Скачать</a></div>
+            <div class="doc-item"><span>Перспективное меню</span><a href="#" class="btn-small">Скачать</a></div>
+        </div>
+
+        <a href="#info" class="btn-back">← Назад к сведениям</a>
+    </div>
+</section>
+
+<!-- Родителям и ученикам -->
+<section id="parents" class="section">
+    <div class="container">
+        <h2 class="section__title">Родителям и ученикам</h2>
+        <ul class="info-list">
+            <li><a href="#parents-admission">Электронная приёмная</a></li>
+            <li><a href="#parents-safety">Безопасность</a></li>
+            <li><a href="#parents-docs">Бланки документов</a></li>
+            <li><a href="#parents-holidays">График каникул</a></li>
+            <li><a href="#parents-camp">Летний отдых</a></li>
+            <li><a href="#parents-helpline">Детский телефон доверия</a></li>
+            <li><a href="#parents-infosec">Информационная безопасность</a></li>
+        </ul>
+    </div>
+</section>
+
+<section id="parents-admission" class="section">
+    <div class="container">
+        <h2 class="section__title">Электронная приёмная</h2>
+
+        <div class="info-block">
+            <h3>Заказ справки</h3>
+            <p>Заполните форму, и справку подготовят в течение 3 рабочих дней.</p>
+            <button type="button" class="btn-more form-open" data-form="form-spravka">Открыть форму</button>
+
+            <form class="form" id="form-spravka" hidden>
+                <label class="form__field">
+                    ФИО ученика
+                    <input type="text" name="student" required>
+                </label>
+                <label class="form__field">
+                    Класс
+                    <input type="text" name="class" placeholder="например, 5А" required>
+                </label>
+                <label class="form__field">
+                    Какая справка нужна
+                    <select name="type" required>
+                        <option value="">Выберите</option>
+                        <option>Справка об обучении</option>
+                        <option>Справка для соцзащиты</option>
+                        <option>Справка для пенсионного фонда</option>
+                        <option>Другая</option>
+                    </select>
+                </label>
+                <label class="form__field">
+                    Количество экземпляров
+                    <input type="number" name="count" min="1" max="5" value="1">
+                </label>
+                <label class="form__field">
+                    ФИО родителя
+                    <input type="text" name="parent" required>
+                </label>
+                <label class="form__field">
+                    Телефон
+                    <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required>
+                </label>
+                <label class="form__field">
+                    Email
+                    <input type="email" name="email">
+                </label>
+                <label class="form__field form__field--wide">
+                    Комментарий
+                    <textarea name="comment" rows="3"></textarea>
+                </label>
+                <label class="form__check">
+                    <input type="checkbox" required>
+                    Согласен(на) на обработку персональных данных
+                </label>
+                <button type="submit" class="btn-more">Отправить заявку</button>
+                <p class="form__message" hidden></p>
+            </form>
+        </div>
+
+        <div class="info-block">
+            <h3>Запись к директору</h3>
+            <p>Запись на приём к директору. Приём ведётся по будням с 7:30 до 12:30.</p>
+            <button type="button" class="btn-more form-open" data-form="form-director">Открыть форму</button>
+
+            <form class="form" id="form-director" hidden>
+                <label class="form__field">
+                    Ваше ФИО
+                    <input type="text" name="name" required>
+                </label>
+                <label class="form__field">
+                    Телефон
+                    <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required>
+                </label>
+                <label class="form__field">
+                    Email
+                    <input type="email" name="email">
+                </label>
+                <label class="form__field">
+                    Желаемая дата
+                    <input type="date" name="date" required>
+                </label>
+                <label class="form__field form__field--wide">
+                    Тема обращения
+                    <textarea name="topic" rows="3" required></textarea>
+                </label>
+                <label class="form__check">
+                    <input type="checkbox" required>
+                    Согласен(на) на обработку персональных данных
+                </label>
+                <button type="submit" class="btn-more">Записаться</button>
+                <p class="form__message" hidden></p>
+            </form>
+        </div>
+
+        <a href="#parents" class="btn-back">← Назад</a>
+    </div>
+</section>
+
+<section id="parents-safety" class="section">
+    <div class="container">
+        <h2 class="section__title">Безопасность</h2>
+
+        <div class="info-block">
+            <h3>Телефоны экстренных служб</h3>
+            <p>Единый номер экстренных служб: <a href="tel:112">112</a></p>
+            <p>Пожарная охрана: <a href="tel:101">101</a></p>
+            <p>Полиция: <a href="tel:102">102</a></p>
+            <p>Скорая помощь: <a href="tel:103">103</a></p>
+        </div>
+
+        <div class="info-block">
+            <h3>Памятки для родителей и учеников</h3>
+            <div class="doc-item"><span>Безопасность дорожного движения</span><a href="#" class="btn-small">Скачать</a></div>
+            <div class="doc-item"><span>Пожарная безопасность</span><a href="#" class="btn-small">Скачать</a></div>
+            <div class="doc-item"><span>Безопасность на воде и на льду</span><a href="#" class="btn-small">Скачать</a></div>
+            <div class="doc-item"><span>Антитеррористическая безопасность</span><a href="#" class="btn-small">Скачать</a></div>
+        </div>
+
+        <a href="#parents" class="btn-back">← Назад</a>
+    </div>
+</section>
+
+<section id="parents-docs" class="section">
+    <div class="container">
+        <h2 class="section__title">Бланки документов</h2>
+
+        <div class="info-block">
+            <h3>Заявления</h3>
+            <div class="doc-item"><span>Заявление о приёме в 1 класс</span><a href="#" class="btn-small">Скачать</a></div>
+            <div class="doc-item"><span>Заявление о приёме в 10 класс</span><a href="#" class="btn-small">Скачать</a></div>
+            <div class="doc-item"><span>Заявление о переводе из другой школы</span><a href="#" class="btn-small">Скачать</a></div>
+            <div class="doc-item"><span>Заявление на выдачу справки</span><a href="#" class="btn-small">Скачать</a></div>
+            <div class="doc-item"><span>Согласие на обработку персональных данных</span><a href="#" class="btn-small">Скачать</a></div>
+        </div>
+
+        <a href="#parents" class="btn-back">← Назад</a>
+    </div>
+</section>
+
+<section id="parents-holidays" class="section">
+    <div class="container">
+        <h2 class="section__title">График каникул</h2>
+        <p class="section__lead">2026–2027 учебный год</p>
+
+        <div class="info-block">
+            <!-- TODO: вписать даты из календарного учебного графика -->
+            <div class="table-wrap">
+                <table class="info-table">
+                    <thead>
+                        <tr><th>Каникулы</th><th>Сроки</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Осенние</td><td>уточняется</td></tr>
+                        <tr><td>Зимние</td><td>уточняется</td></tr>
+                        <tr><td>Весенние</td><td>уточняется</td></tr>
+                        <tr><td>Летние</td><td>уточняется</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="doc-item mt"><span>Календарный учебный график на 2026–2027 учебный год</span><a href="#" class="btn-small">Скачать</a></div>
+        </div>
+
+        <a href="#parents" class="btn-back">← Назад</a>
+    </div>
+</section>
+
+<section id="parents-camp" class="section">
+    <div class="container">
+        <h2 class="section__title">Летний отдых</h2>
+
+        <div class="info-block">
+            <h3>Организация летнего отдыха</h3>
+            <p>Информация о летних сменах, сроках подачи заявлений и порядке получения путёвок публикуется в этом разделе весной.</p>
+        </div>
+
+        <div class="info-block">
+            <h3>Документы</h3>
+            <div class="doc-item"><span>Положение о летнем лагере</span><a href="#" class="btn-small">Скачать</a></div>
+            <div class="doc-item"><span>Заявление на летнюю смену</span><a href="#" class="btn-small">Скачать</a></div>
+        </div>
+
+        <a href="#parents" class="btn-back">← Назад</a>
+    </div>
+</section>
+
+<section id="parents-helpline" class="section">
+    <div class="container">
+        <h2 class="section__title">Детский телефон доверия</h2>
+
+        <div class="helpline">
+            <a href="tel:88002000122" class="helpline__phone">8-800-2000-122</a>
+            <p>Звонок бесплатный с любого телефона. Анонимно, круглосуточно.</p>
+            <p>Позвонить могут и дети, и родители, если нужна помощь психолога.</p>
+        </div>
+
+        <a href="#parents" class="btn-back">← Назад</a>
+    </div>
+</section>
+
+<section id="parents-infosec" class="section">
+    <div class="container">
+        <h2 class="section__title">Информационная безопасность</h2>
+
+        <div class="info-block">
+            <h3>Правила безопасного интернета</h3>
+            <ul class="info-sublist">
+                <li>Не сообщай незнакомым людям свои личные данные, адрес и номер телефона</li>
+                <li>Не переходи по подозрительным ссылкам и не скачивай файлы от незнакомцев</li>
+                <li>Придумывай сложные пароли и никому их не говори</li>
+                <li>Если что-то в интернете тебя напугало, расскажи родителям или учителю</li>
+            </ul>
+        </div>
+
+        <div class="info-block">
+            <h3>Документы</h3>
+            <div class="doc-item"><span>Положение об информационной безопасности</span><a href="#" class="btn-small">Скачать</a></div>
+            <div class="doc-item"><span>Памятка для родителей</span><a href="#" class="btn-small">Скачать</a></div>
+        </div>
+
+        <a href="#parents" class="btn-back">← Назад</a>
+    </div>
+</section>
+
+<!-- Поступающим -->
+<section id="enroll" class="section">
+    <div class="container">
+        <h2 class="section__title">Поступающим</h2>
+        <ul class="info-list">
+            <li><a href="#enroll-1">Приём в 1 класс</a></li>
+            <li><a href="#enroll-5-7">Приём в 5 и 7 класс</a></li>
+            <li><a href="#enroll-10">Приём в 10 класс</a></li>
+        </ul>
+    </div>
+</section>
+
+<section id="enroll-1" class="section">
+    <div class="container">
+        <h2 class="section__title">Приём в 1 класс</h2>
+        <p class="text">Информация о приёме в первый класс: сроки, документы, способы подачи заявления.</p>
+        <a href="#enroll" class="btn-back">← Назад</a>
+    </div>
+</section>
+
+<section id="enroll-5-7" class="section">
+    <div class="container">
+        <h2 class="section__title">Приём в 5 и 7 класс</h2>
+        <p class="text">Информация о приёме в 5 и 7 классы: направления, этапы, сроки.</p>
+        <a href="#enroll" class="btn-back">← Назад</a>
+    </div>
+</section>
+
+<section id="enroll-10" class="section">
+    <div class="container">
+        <h2 class="section__title">Приём в 10 класс</h2>
+        <p class="text">Информация о приёме в 10 класс: профили, условия, документы.</p>
+        <a href="#enroll" class="btn-back">← Назад</a>
+    </div>
+</section>
+
+<!-- Деятельность -->
+<section id="activity" class="section">
+    <div class="container">
+        <h2 class="section__title">Деятельность</h2>
+        <ul class="info-list">
+            <li><a href="#activity-study">Учебная деятельность</a></li>
+            <li><a href="#activity-educate">Воспитательная деятельность</a></li>
+            <li><a href="#activity-method">Методическая работа</a></li>
+            <li><a href="#activity-noko">Независимая оценка качества</a></li>
+        </ul>
+    </div>
+</section>
+
+<section id="activity-study" class="section">
+    <div class="container">
+        <h2 class="section__title">Учебная деятельность</h2>
+        <ul class="info-sublist">
+            <li>ВСОКО</li>
+            <li>ГИА</li>
+            <li>Всероссийская олимпиада школьников</li>
+            <li>ФГОС</li>
+            <li>Работа с обучающимися с ОВЗ</li>
+        </ul>
+        <a href="#activity" class="btn-back">← Назад</a>
+    </div>
+</section>
+
+<section id="activity-educate" class="section">
+    <div class="container">
+        <h2 class="section__title">Воспитательная деятельность</h2>
+        <ul class="info-sublist">
+            <li>Движение Первых</li>
+            <li>Школьный спортивный клуб</li>
+            <li>Психологическая служба</li>
+            <li>Программа воспитания</li>
+            <li>Медиацентр</li>
+            <li>Школьный музей</li>
+            <li>Профориентация</li>
+            <li>Навигатор детства</li>
+        </ul>
+        <a href="#activity" class="btn-back">← Назад</a>
+    </div>
+</section>
+
+<section id="activity-method" class="section">
+    <div class="container">
+        <h2 class="section__title">Методическая работа</h2>
+        <p class="text">Методическая служба школы — это гибкая развивающаяся внутришкольная структура обеспечения, разработки и внедрения современных педагогических технологий.</p>
+        <a href="#activity" class="btn-back">← Назад</a>
+    </div>
+</section>
+
+<section id="activity-noko" class="section">
+    <div class="container">
+        <h2 class="section__title">Независимая оценка качества</h2>
+        <p class="text">Анкета доступна по QR-коду и по прямой ссылке:
+            <a href="https://bus.gov.ru/qrcode/rate/389818" target="_blank">bus.gov.ru/qrcode/rate/389818</a>
+        </p>
+        <a href="#activity" class="btn-back">← Назад</a>
+    </div>
+</section>
+
+<!-- Расписание -->
+<section id="schedule" class="section">
+    <div class="container">
+        <h2 class="section__title">Расписание</h2>
+        <p class="section__lead">Расписание занятий</p>
+        <div class="schedule-placeholder">
+            <p>Здесь будет размещено расписание занятий</p>
+        </div>
+    </div>
+</section>
+
+<!-- Карта сайта -->
+<section id="map" class="section">
+    <div class="container">
+        <h2 class="section__title">Карта сайта</h2>
+        <ul class="sitemap">
+            <li><a href="#home">Главная</a></li>
+            <li><a href="#news">Новости</a></li>
+            <li>
+                <a href="#info">Сведения об образовательной организации</a>
+                <ul>
+                    <li><a href="#info-main">Основные сведения</a></li>
+                    <li><a href="#info-structure">Структура и органы управления</a></li>
+                    <li><a href="#info-docs">Документы</a></li>
+                    <li><a href="#info-education">Образование</a></li>
+                    <li><a href="#info-standards">Образовательные стандарты и требования</a></li>
+                    <li><a href="#info-management">Руководство</a></li>
+                    <li><a href="#info-teachers">Педагогический состав</a></li>
+                    <li><a href="#info-mto">Материально-техническое обеспечение</a></li>
+                    <li><a href="#info-paid">Платные образовательные услуги</a></li>
+                    <li><a href="#info-finance">Финансово-хозяйственная деятельность</a></li>
+                    <li><a href="#info-vacancies">Вакантные места</a></li>
+                    <li><a href="#info-scholarship">Стипендии и меры поддержки</a></li>
+                    <li><a href="#info-international">Международное сотрудничество</a></li>
+                    <li><a href="#info-food">Организация питания</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#parents">Родителям и ученикам</a>
+                <ul>
+                    <li><a href="#parents-admission">Электронная приёмная</a></li>
+                    <li><a href="#parents-safety">Безопасность</a></li>
+                    <li><a href="#parents-docs">Бланки документов</a></li>
+                    <li><a href="#parents-holidays">График каникул</a></li>
+                    <li><a href="#parents-camp">Летний отдых</a></li>
+                    <li><a href="#parents-helpline">Детский телефон доверия</a></li>
+                    <li><a href="#parents-infosec">Информационная безопасность</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#enroll">Поступающим</a>
+                <ul>
+                    <li><a href="#enroll-1">Приём в 1 класс</a></li>
+                    <li><a href="#enroll-5-7">Приём в 5 и 7 класс</a></li>
+                    <li><a href="#enroll-10">Приём в 10 класс</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#activity">Деятельность</a>
+                <ul>
+                    <li><a href="#activity-study">Учебная деятельность</a></li>
+                    <li><a href="#activity-educate">Воспитательная деятельность</a></li>
+                    <li><a href="#activity-method">Методическая работа</a></li>
+                    <li><a href="#activity-noko">Независимая оценка качества</a></li>
+                </ul>
+            </li>
+            <li><a href="#schedule">Расписание</a></li>
+        </ul>
+    </div>
+</section>
+
+<!-- Результаты поиска (заполняются в script.js) -->
+<section id="search" class="section">
+    <div class="container">
+        <h2 class="section__title">Результаты поиска</h2>
+        <p class="section__lead" id="search-info">Введите запрос в поле поиска вверху страницы.</p>
+        <ul class="search-results" id="search-results"></ul>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="container footer__inner">
+        <div class="footer__col footer__col--about">
+            <p class="footer__name">МАОУ «СОШ №79» г. Перми</p>
+            <p>Курсом к знаниям. Вместе к будущему</p>
+        </div>
+        <div class="footer__col">
+            <h4>Адреса</h4>
+            <p>614026, г. Пермь, ул. Томская, 30</p>
+            <p>614026, г. Пермь, ул. Цимлянская, д. 4</p>
+        </div>
+        <div class="footer__col">
+            <h4>Контакты</h4>
+            <p>Секретарь: <a href="tel:+73422063500">+7 (342) 206-35-00</a></p>
+            <p><a href="mailto:sc79perm@yandex.ru">sc79perm@yandex.ru</a></p>
+        </div>
+        <div class="footer__col">
+            <h4>Режим работы</h4>
+            <p>Пн–Пт: 8:00–21:00</p>
+            <p>Сб: 8:00–16:00</p>
+            <p>Вс: выходной</p>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
